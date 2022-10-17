@@ -17,7 +17,7 @@ const DetailsPizza = () => {
         {product
           .filter((a) => a.id === id)
           .map((e) => (
-            <div className="image-desc">
+            <div className="image-desc" key={e.id}>
               <img src={e.img} alt="" />
               <div className="nameamount">
                 <hr className="line"></hr>
