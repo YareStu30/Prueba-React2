@@ -61,7 +61,7 @@ const Home = () => {
               <div className="buttons">
                 <button
                   type="button"
-                  className="btn btn-"
+                  className="btn btn-primary"
                   onClick={() => navigate(`/product/${item.id}`)}
                 >
                   Ver más

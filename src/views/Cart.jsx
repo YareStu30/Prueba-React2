@@ -20,8 +20,8 @@ const Cart = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="boxCart">
+      <div className="count-pizza">
         <h2>Cantidad de Pizzas</h2>
       </div>
 
@@ -53,14 +53,14 @@ const Cart = () => {
           </div>
         ))}
         <div>
-          <h3>
+          <h3 className="count-pizza">
             Total Pedido $
             {cartProduct
               .map((item) => item.price * item.amount)
               .reduce((prev, curr) => prev + curr, 0)
               .toLocaleString("de-DE")}
           </h3>
-          <button className="btn3"> Vai a pagare</button>
+          <button className="btn3"> Ir a Pagar</button>
         </div>
       </div>
     </div>
