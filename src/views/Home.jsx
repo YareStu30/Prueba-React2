@@ -61,14 +61,14 @@ const Home = () => {
               <div className="buttons">
                 <button
                   type="button"
-                  className="btn btn-primary"
+                  className="btn btn-"
                   onClick={() => navigate(`/product/${item.id}`)}
                 >
                   Ver más
                 </button>
                 <button
                   type="button"
-                  className="btn btn-success"
+                  className="btn btn-warning"
                   onClick={() => add(item)}
                 >
                   <img

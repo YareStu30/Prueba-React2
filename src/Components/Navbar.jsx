@@ -33,7 +33,6 @@ export default function Navbar() {
             .reduce((prev, curr) => prev + curr, 0)
             .toLocaleString("de-DE")}
         </h3>
-        <h3 className="amount">{cartProduct.length}</h3>
       </div>
     </nav>
   );
