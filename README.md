@@ -1,4 +1,4 @@
-link al proyecto: https://velvety-brioche-5ec35d.netlify.app/
+link al proyecto: https://lovely-gnome-381450.netlify.app/
 
 
 # Getting Started with Create React App
