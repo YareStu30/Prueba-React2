@@ -22,17 +22,30 @@ const Home = () => {
         timer: 1000,
       });
     }
-    setCartProduct([
-      ...cartProduct,
-      {
-        id: cartProduct.length + 1,
-        idProduct: element.id,
-        name: element.name,
-        amount: 1,
-        price: element.price,
-        img: element.img,
-      },
-    ]);
+    if (cartProduct.filter((e) => e.idProduct === element.id).length > 0) {
+      setCartProduct((current) =>
+        current.map((obj) => {
+          if (obj.idProduct === element.id) {
+            return { ...obj, amount: obj.amount * 1 + 1 };
+          }
+          return obj;
+        })
+      );
+    } else if (
+      cartProduct.filter((e) => e.idProduct === element.id).length === 0
+    ) {
+      setCartProduct([
+        ...cartProduct,
+        {
+          id: cartProduct.length + 1,
+          idProduct: element.id,
+          name: element.name,
+          amount: 1,
+          price: element.price,
+          img: element.img,
+        },
+      ]);
+    }
   };
 
   return (
